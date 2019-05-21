@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+body {
+  background-image: linear-gradient(#f6fe19 ,#feac2b);
+  height: 900px;
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* INDEX.HTML CSS STYLES  */
+
+h1 {
+  color: #6c532c;
+  font-family: 'Pacifico', cursive;
+  font-size: 58pt;
+  text-align: center;
+}
+
+.food-choice {
+  width: 200px;
+  height: 200px;
+  background-color: #b5b5b5;
+  position: relative;
+  display: inline-block;
+  border: 1px white solid;
+  margin: 20px;
+}
+
+.food-choice:hover {
+    background-color: #919bad;
+    box-shadow: 0px 0px 41px 9px rgba(250,250,105,1);
+}
+
+.all {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin:  0 auto;
+}
+
+.helper {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.desc {
+  font-family: 'Baloo Bhai', cursive;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////// */
+/* INGREDIENTS.HTML CSS STYLES  */
+
+.container-i {
+  width: 500px;
+  height: 100px;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.helper2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10% 0;
+}
+
+button {
+  width: 180px;
+  height: 70px;
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 16px;
+}
+
+.text-ing {
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////// */
+/* RECIPE.HTML CSS STYLES  */
+
+.emoji {
+  font-size: 150px;
+  text-align: center;
+}
+
+.helper3 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 15% 0;
+}
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////// */
