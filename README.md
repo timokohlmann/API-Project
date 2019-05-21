@@ -1,6 +1,6 @@
 # API-Project
 
-Website for quickly finding recipe-ideas!
+Website for finding recipe-ideas quickly!
 
 
 
