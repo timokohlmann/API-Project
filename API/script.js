@@ -8,6 +8,8 @@
           q:"pasta"
         };
 
+console.log('foo');
+
 
   fetch(url, {
     method: "GET",
