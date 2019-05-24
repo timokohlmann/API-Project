@@ -16,7 +16,7 @@
 
     <div class="food-choice">
       <span class="helper"></span>
-        <a href="./ingredients.html">
+        <a href="./recipevegetarian.html">
         <img src="./img/vegetarian.jpg" alt="vegetarian food">
         </a>
         <p class="desc"> Vegetarian </p>
@@ -24,7 +24,7 @@
 
     <div class="food-choice">
       <span class="helper"></span>
-        <a href="./ingredients.html">
+        <a href="./recipepasta.html">
         <img src="./img/pasta.jpg" alt="pasta food">
         </a>
       <p class="desc"> Pasta </p>
@@ -32,13 +32,32 @@
 
     <div class="food-choice">
       <span class="helper"></span>
-      <a href="./ingredients.html">
+      <a href="./recipemeat.html">
       <img src="./img/meat.jpg" alt="meat food">
       </a>
       <p class="desc"> Meat </p>
     </div>
 
   </div>
+
+
+
+  <script>
+fetch('https://api.edamam.com/search?q=pasta&app_id=f763ba97&app_key=b1534ab1d1a19fb1ac89448c19494cf4')
+.then(response => response.json())
+.then(data => {
+console.log(data)
+});
+
+let render = function (template, node) {
+  node.innerHTML = template;
+};
+
+let template = '<p>'+ +'</p>';
+render(template, document.querySelector('#recipe'));
+
+
+</script>
 
   </body>
 </html>

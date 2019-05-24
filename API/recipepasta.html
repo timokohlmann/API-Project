@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="./stylesheet.css">
+
+    <title></title>
+  </head>
+
+  <body>
+
+            <span class="helper3"></span>
+
+            <div id="recipe"></div>
+
+            <p class="emoji"> &#127860; </p>
+
+
+            <script>
+            fetch('https://api.edamam.com/search?q=pasta&app_id=f763ba97&app_key=b1534ab1d1a19fb1ac89448c19494cf4')
+              .then(response => response.json())
+              .then(data => {
+                console.log(data)
+
+                let random = (10 * Math.random())
+                let randomNum = Math.round(random)
+
+                let recipeName = data.hits[randomNum].recipe.label
+                let recipeImg = data.hits[randomNum].recipe.image
+                let recipeIngr = data.hits[0].recipe.ingredients
+
+
+                let render = function (template, node) {
+                    node.innerHTML = template;
+                };
+
+                let template = `
+                  <h2> ${recipeName} </h2>
+                  <img src="${recipeImg}">
+                  Ingredients:  ${recipeIngr}
+                   </img>
+                `;
+
+                render(template, document.querySelector('#recipe'));
+              });
+
+            </script>
+  </body>
+</html>

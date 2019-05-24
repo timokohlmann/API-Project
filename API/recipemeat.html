@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="./stylesheet.css">
+
+    <title></title>
+  </head>
+
+  <body>
+
+            <span class="helper3"></span>
+
+            <div id="recipe"></div>
+
+            <p class="emoji"> &#127860; </p>
+
+
+            <script>
+            fetch('https://api.edamam.com/search?q=meat&app_id=f763ba97&app_key=b1534ab1d1a19fb1ac89448c19494cf4')
+              .then(response => response.json())
+              .then(data => {
+                console.log(data)
+
+                let randomNum = Math.round((10 * Math.random()))
+
+                let recipeName = data.hits[randomNum].recipe.label
+                let recipeImg = data.hits[randomNum].recipe.image
+                let ingrArray = data.hits[0].recipe.ingredients
+                let recipeIngrlength = ingrArray.length
+
+                // createNode Funktion hinzufügen
+                function createNode(element) {
+                  return document.createElement(element);
+                }
+                // append Funktion hinzufügen
+                function append(parent, el) {
+                  return parent.appendChild(el);
+                }
+                // for Schleife durch ingrArray.map() ersetzen
+                
+                 let test = ingrArray.map(function()) {
+                  let li = createNode('li');
+                  append(querySelector('#ingrList'),li);       // innerhalb von map() die <li> nodes dem <p> appenden
+                }
+
+                // for-loop
+                // for (let i = 0; i < recipeIngrlength; i++) {
+                //   console.log(ingrArray[i].text);
+                // }
+
+                let render = function (template, node) {
+                    node.innerHTML = template;
+                };
+
+                let template = `
+                  <h2> ${recipeName} </h2>
+                  <img src="${recipeImg}">
+                  <p id="ingrList">  </p>
+                 </img>
+                `;
+
+                render(template, document.querySelector('#recipe'));
+              });
+
+            </script>
+  </body>
+</html>

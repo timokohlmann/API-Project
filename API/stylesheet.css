@@ -16,6 +16,12 @@ h1 {
   font-size: 58pt;
   text-align: center;
 }
+h2 {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  color: #191919;
+
+}
 
 .food-choice {
   width: 200px;
@@ -102,11 +108,16 @@ button {
 .helper3 {
     display: inline-block;
     vertical-align: middle;
-    margin: 15% 0;
+    margin: 2% 0;
 }
 
-
-
+#recipe {
+  background-color: #e8d2a1;
+  width: 400px;
+  height: 400px;
+  border: 2px solid white;
+  margin: 0 auto;
+}
 
 
 
